@@ -148,7 +148,7 @@
 	class="w-screen h-screen text-6xl overflow-hidden cursor-default relative flex flex-col justify-center items-center text-center"
 	bind:this={element}
 >
-	{prompts && prompts[$state.step.key]}
+	{prompts ? prompts[$state.step.key] : ''}
 	{#if $state.step.key === 'showingCat'}
 		<!-- PREVIEW -->
 		<div
