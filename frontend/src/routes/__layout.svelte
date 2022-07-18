@@ -4,6 +4,7 @@
 </script>
 
 <svelte:head>
+	<title>Autoboop</title>
 	<meta name="title" content="Autoboop">
 	<meta name="description" content="Weird site that puts a cat's face under your pointer">
 	<meta property="og:type" content="website">
