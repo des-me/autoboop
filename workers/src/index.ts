@@ -10,18 +10,27 @@ const resolvers: Resolvers<Request> = {
 	Query: {
 		cat: async (parent, { x, y }, ctx) => {
 			const hash = geohash.encode_int(x, y);
-			const cats = await AUTOBOOP_KV.list({ prefix: hash.toString().slice(0, 2) });
-			console.log(`Got ${cats.keys.length} keys. Comparing with hash ${hash}`);
+			console.log(`Querying KV Store with hash ${hash}`);
+			let precision = 4
+			let cats = await AUTOBOOP_KV.list({ prefix: hash.toString().slice(0, precision) });
+			console.log(`Got ${cats.keys.length} keys.`);
+			while (cats.keys.length === 0 && precision >= 0) {
+				precision = precision - 1;
+				cats = await AUTOBOOP_KV.list({ prefix: hash.toString().slice(0, precision) });
+				console.log(`Got ${cats.keys.length} keys.`);
+			}
 			const keys: number[] = cats.keys
 				.map((k) => parseInt(k.name))
 				.sort((a, b) => Math.abs(a - hash) - Math.abs(b - hash))
 				.slice(0, 10);
 			const key = keys[Math.floor(Math.random() * keys.length)];
+			console.log(`Querying KV Store for ${key}`);
 			const data = await AUTOBOOP_KV.get(key, { type: 'json' });
+			console.log(`Retrieved response: ${data.name}`);
 			return {
-        ...data,
-        name: `cats/${data.name}`
-      };
+				...data,
+				name: `cats/${data.name}`
+			};
 		}
 	}
 };
