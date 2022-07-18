@@ -1,0 +1,12 @@
+type Cat {
+  name: String!
+  base64: String!
+  height: Float!
+  width: Float!
+  x: Float!
+  y: Float!
+}
+
+type Query {
+  cat(x: Int!, y: Int!): Cat!
+}

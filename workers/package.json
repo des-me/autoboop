@@ -1,0 +1,28 @@
+{
+  "name": "autoboop-api",
+  "description": "api.autoboop.com",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "wrangler dev",
+    "build": "webpack",
+    "deploy": "wrangler publish",
+    "check": "tsc --pretty --noEmit"
+  },
+  "dependencies": {
+    "@graphql-yoga/common": "2.1.0",
+    "graphql": "16.3.0",
+    "ngeohash": "^0.6.3"
+  },
+  "devDependencies": {
+    "@types/ngeohash": "^0.6.4",
+    "@types/service-worker-mock": "2.0.1",
+    "graphql-tag": "^2.12.6",
+    "service-worker-mock": "2.0.5",
+    "ts-loader": "8.1.0",
+    "typescript": "4.5.5",
+    "webpack": "4.46.0",
+    "webpack-cli": "^4.10.0",
+    "wrangler": "^2.0.22"
+  }
+}

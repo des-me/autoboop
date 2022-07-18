@@ -1,0 +1,11 @@
+compatibility_date = "2022-02-21"
+main = "dist/main.js"
+name = "autoboop-api"
+workers_dev = true
+compatibility_flags = ["streams_enable_constructors"]
+kv_namespaces = [
+    { binding = "AUTOBOOP_KV", id = "575d7b91320c445d979a511bcd4b02c6", preview_id = "575d7b91320c445d979a511bcd4b02c6" }
+]
+r2_buckets = [
+    { binding = "AUTOBOOP_R2", bucket_name="autoboop", preview_bucket_name="autoboop" }
+]

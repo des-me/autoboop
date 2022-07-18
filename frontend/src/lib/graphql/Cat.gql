@@ -1,0 +1,10 @@
+query Cat($x: Int!, $y: Int!) {
+	cat(x: $x, y: $y) {
+		y
+		x
+		width
+		name
+		height
+		base64
+	}
+}

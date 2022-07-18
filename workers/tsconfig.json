@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "module": "esnext",
+    "allowSyntheticDefaultImports": true,
+    "target": "esnext",
+    "lib": ["esnext", "webworker"],
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "skipLibCheck": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist", "test"]
+}
