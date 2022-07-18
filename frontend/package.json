@@ -5,7 +5,6 @@
 		"dev": "vite dev",
 		"build": "vite build",
 		"package": "svelte-kit package",
-		"generate": "graphql-codegen",
 		"preview": "vite preview",
 		"deploy": "wrangler pages publish --project-name=$CF_PAGES_NAME ./.svelte-kit/cloudflare",
 		"prepare": "svelte-kit sync",
@@ -16,10 +15,6 @@
 		"format": "prettier --write --plugin-search-dir=. ."
 	},
 	"devDependencies": {
-		"@graphql-codegen/cli": "^2.8.1",
-		"@graphql-codegen/typescript": "^2.7.1",
-		"@graphql-codegen/typescript-operations": "^2.5.1",
-		"@graphql-codegen/typescript-resolvers": "^2.7.1",
 		"@playwright/test": "^1.22.2",
 		"@rollup/plugin-graphql": "^1.1.0",
 		"@sveltejs/adapter-auto": "next",
@@ -31,7 +26,6 @@
 		"eslint": "^8.16.0",
 		"eslint-config-prettier": "^8.3.0",
 		"eslint-plugin-svelte3": "^4.0.0",
-		"graphql-codegen-svelte-apollo": "^1.1.0",
 		"postcss": "^8.4.14",
 		"prettier": "^2.6.2",
 		"prettier-plugin-svelte": "^2.7.0",

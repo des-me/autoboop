@@ -1,0 +1,26 @@
+{
+  "name": "autoboop",
+  "version": "1.0.0",
+  "description": "https://autoboop.com",
+  "main": "index.js",
+  "scripts": {
+		"generate": "graphql-codegen"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/des-me/autoboop.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/des-me/autoboop/issues"
+  },
+  "homepage": "https://github.com/des-me/autoboop#readme",
+  "devDependencies": {
+		"@graphql-codegen/cli": "^2.8.1",
+		"@graphql-codegen/typescript": "^2.7.1",
+		"@graphql-codegen/typescript-operations": "^2.5.1",
+		"@graphql-codegen/typescript-resolvers": "^2.7.1",
+		"graphql-codegen-svelte-apollo": "^1.1.0"
+  }
+}

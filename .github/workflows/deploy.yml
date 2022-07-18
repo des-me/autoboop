@@ -9,6 +9,7 @@ env:
   CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
   CF_PAGES: 1
   CF_PAGES_NAME: autoboop
+  NODE_ENV: production
   VITE_API_BASE_URL: ${{ secrets.AUTOBOOP_API_URL }}
   VITE_FRONTEND_URL: ${{ secrets.AUTOBOOP_BASE_URL }}
 

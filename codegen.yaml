@@ -1,11 +1,11 @@
-schema: ./cloudflare/src/schema.graphql
-documents: './src/**/*.gql'
+schema: ./workers/src/schema.graphql
+documents: './frontend/src/**/*.gql'
 generates:
-  ./cloudflare/src/generated-resolver-types.ts:
+  ./workers/src/generated-resolver-types.ts:
     plugins:
       - typescript
       - typescript-resolvers
-  ./src/lib/graphql/generated-operations.ts:
+  ./frontend/src/lib/graphql/generated-operations.ts:
     plugins:
       - typescript
       - typescript-operations

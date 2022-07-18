@@ -1,6 +1,6 @@
 module.exports = {
-  context: __dirname,
-  target: 'webworker',
+  context: __dirname, target: 'webworker',
+  watch: process.env.NODE_ENV !== 'production',
   devtool: 'cheap-module-source-map', // avoid "eval": Workers environment doesn’t allow it
   entry: './src/index.ts',
   module: {
