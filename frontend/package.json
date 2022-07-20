@@ -6,7 +6,7 @@
 		"build": "vite build",
 		"package": "svelte-kit package",
 		"preview": "vite preview",
-		"deploy": "wrangler pages publish --project-name=$CF_PAGES_NAME ./build",
+		"deploy": "wrangler pages publish --project-name=$CF_PAGES_NAME --branch $BRANCH_NAME ./build",
 		"prepare": "svelte-kit sync",
 		"test": "playwright test",
 		"check": "svelte-check --tsconfig ./tsconfig.json",

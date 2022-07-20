@@ -2,7 +2,7 @@ name: Build and Deploy
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, prod ]
 
 env:
   CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
@@ -11,6 +11,7 @@ env:
   CF_PAGES_NAME: autoboop
   VITE_API_BASE_URL: ${{ secrets.AUTOBOOP_API_URL }}
   VITE_FRONTEND_URL: ${{ secrets.AUTOBOOP_BASE_URL }}
+  BRANCH: ${{ github.ref_name }}
 
 jobs:
   deploy-frontend:
